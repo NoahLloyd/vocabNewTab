@@ -3,6 +3,7 @@
 :root {
     /* Color palette */
     --color-1: #03045e;
+    --color-1-transparent: #03045ebb;
     --color-2: #0077b6;
     --color-2-transparent: #0076b6a2;
     --color-3: #00b4d8;
@@ -24,8 +25,40 @@ body {
     left: 0;
     z-index: -1;
     max-width: 100%;
-    height: auto;
-    width: auto/9;
+    image-resolution: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.search {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    text-align: center;
+}
+
+.search-icon {
+    cursor: pointer;
+    fill: white;
+}
+
+.search-bar {
+    width: 200px;
+    height: 25px;
+    border-radius: 3px;
+    margin-top: 20px;
+    background-color: #ffffff99;
+    display: block;
+    border: none;
+    transition: width 100ms ease, background-color 100ms ease;
+}
+
+.search-bar:focus {
+    background-color: #fff;
+    width: 300px;
+    outline: none;
+    transition: all 100ms ease;
 }
 
 .stats {
@@ -37,7 +70,7 @@ body {
 
 .stats--stat {
     text-align: center;
-    color: white;
+    color: var(--color-5);
 }
 
 .stats--title {
@@ -45,12 +78,15 @@ body {
 }
 
 /* Main section */
-main {
-    width: 60%;
-    padding: 2%;
-    color: white;
+.vocab {
+    padding: 0.5vh 2vw 2vh 2vw;
+    color: var(--color-5);
     background-color: var(--color-2-transparent);
     box-shadow: 0 0 30px rgba(0,0,0,1);
+}
+
+main {
+    width: 60%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -71,6 +107,9 @@ main {
 }
 
 .synonym {
+    min-height: 1.2rem;
+    min-width: 1.2rem;
+    vertical-align: middle;
     font-weight: 500;
     margin: 0.1rem 0.2rem;
     display: inline-block;
@@ -87,15 +126,42 @@ main {
     display: inline-block;
     margin: 0.5rem 0;
     text-align: right;
-    padding: 5px 7px;
+    padding: 0.3rem;
     border-radius: 3px;
 }
 
-.pos {
+.top-left-items {
     position: absolute;
+    left: 0;
+    top: 0;
     color: var(--color-4);
+    margin: 1vh 0 0 2vw;
 }
 
+.hear {
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-block;
+    fill: var(--color-4);
+    transition: fill 200ms ease;
+}
+
+.hear:hover {
+    fill: var(--color-2);
+    transition: fill 200ms ease;
+}
+
+.pos {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.phonetic {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1vh 2vw 0 0;
+}
 .origin {
     display: inline-block;
     color: #aaa;
@@ -105,7 +171,7 @@ main {
 }
 
 .origin:hover {
-    color: white;
+    color: var(--color-5);
     font-weight: 400;
     font-size: 1.5rem;
     padding: 5px 10px;
@@ -120,7 +186,7 @@ main {
     bottom: 0;
     left: 0;
     margin: 1rem;
-    color: white;
+    color: var(--color-5);
     font-weight: 100;
     font-size: 0.9rem;
     cursor: pointer;
@@ -134,10 +200,10 @@ main {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.5);
+    /* background-color: rgba(0,0,0,0.5);
     padding: 5px 10px;
+    border-radius: 2px; */
     margin: 0 0 0.3rem 1rem;
-    border-radius: 2px;
     color: white;
     font-weight: 100;
     font-size: 1rem;
@@ -154,4 +220,47 @@ main {
     color: var(--color-2);
     padding-bottom: 15px;
     transition: padding-bottom 400ms ease-in-out;
+}
+
+.quick-links {
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quick-link {
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: var(--color-1-transparent);
+    transition: background-color 200ms ease-in-out;
+}
+
+.quick-link:hover {
+    background-color: var(--color-1);
+    transition: background-color 200ms ease-in-out;
+}
+
+.favicon {
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.site-name {
+    width: 80%;
+    font-size: 0.8rem;
+    margin: 10px auto;
+    color: white;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
 }
