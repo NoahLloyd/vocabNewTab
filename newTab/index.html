@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Tab</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <img src="./backgroundImages/1.jpg" alt="Background image" class="background" id="background">
+    <section class="stats">
+      <article class="stats--stat">
+    <h2 class="stats--title">Words left</h2>
+    <h1 class="stats--data">631</h1>
+  </article>
+  <article class="stats--stat">
+
+    <h2 class="stats--title">Words learned</h2>
+    <h1 class="stats--data">53146</h1>
+  </article>
+
+    <article class="stats--stat">
+    <h2 class="stats--title">Time spent</h2>
+    <h1 class="stats--data">2h 30m</h1>
+  </article>
+
+  </section>
+
+  <main>
+    <div class="pos" id="pos">pos</div>
+    <h1 class="word" id="word">Word</h1>
+    <audio href class="hear" id="hear"></audio>
+    <div class="phonetic" id="phonetic"></div>
+    </div>
+    <div class="synonyms">
+    <div class="synonym">synonym</div>
+    <div class="synonym">synonym</div>
+    <div class="synonym">synonym</div>
+    <div class="synonym">synonym</div>
+  </div>
+    <div class="definition" id="definition">this is a sample definition of the word chosen for learning vocab</div>
+    <div class="sentence" id="sentence">"this is a test sentence to fill space"</div>
+    <div class="origin" id="origin">this is sample text to show how the origin would look like</div>
+  </main>
+  <article class="toggle-attributes" id="toggleAttributes" onclick="showAttributes()">Show attributions</article>
+  <section class="attributes" id="attributes">
+  <div class="attribution">Picture from <a href="https://unsplash.com">Unsplash</a></div>
+  </section>
+  </body>
+</html>

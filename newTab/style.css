@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+:root {
+    /* Color palette */
+    --color-1: #03045e;
+    --color-2: #0077b6;
+    --color-2-transparent: #0076b6a2;
+    --color-3: #00b4d8;
+    --color-4: #90e0ef;
+    --color-5: #caf0f8;
+
+}
+
+body {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    max-width: 100%;
+    height: auto;
+    width: auto/9;
+}
+
+.stats {
+  margin: 2rem 30%;
+  display: flex;   
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.stats--stat {
+    text-align: center;
+    color: white;
+}
+
+.stats--title {
+    font-weight: 100;
+}
+
+/* Main section */
+main {
+    width: 60%;
+    padding: 2%;
+    color: white;
+    background-color: var(--color-2-transparent);
+    box-shadow: 0 0 30px rgba(0,0,0,1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.word {
+    border-bottom: 2px solid var(--color-1);
+    text-align: center;
+    padding: 0.4rem;
+    font-weight: 500;
+    margin: 0.1rem;
+}
+
+.synonyms {
+    margin: 0.5rem 0;
+    display: inline-block;
+}
+
+.synonym {
+    font-weight: 500;
+    margin: 0.1rem 0.2rem;
+    display: inline-block;
+    padding: 0.3rem;
+    background-color: var(--color-4);
+    color: black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.definition {
+    font-weight: 300;
+    background-color: var(--color-2);
+    display: inline-block;
+    margin: 0.5rem 0;
+    text-align: right;
+    padding: 5px 7px;
+    border-radius: 3px;
+}
+
+.pos {
+    position: absolute;
+    color: var(--color-4);
+}
+
+.origin {
+    display: inline-block;
+    color: #aaa;
+    font-weight: 100;
+    margin-top: 0.5rem;
+    transition: font-size 200ms ease;
+}
+
+.origin:hover {
+    color: white;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-align: center;
+    background-color: var(--color-1);
+    transition: font-size 200ms ease, background-color 200ms ease;
+}
+
+.toggle-attributes {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 1rem;
+    color: white;
+    font-weight: 100;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: none;
+}
+
+.attributes {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    margin: 0 0 0.3rem 1rem;
+    border-radius: 2px;
+    color: white;
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+.attributes a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    transition: padding-bottom 300ms ease-in-out;
+}
+
+.attributes a:hover {
+    color: var(--color-2);
+    padding-bottom: 15px;
+    transition: padding-bottom 400ms ease-in-out;
+}

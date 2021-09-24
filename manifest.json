@@ -1,0 +1,15 @@
+{
+  "name": "Vocab Tab",
+  "description": "Beautiful New Tab page to learn english vocabulary",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": { "16": "/icons/16.png", "48": "/icons/48.png", "128": "/icons/128.png" },
+  "options_page": "options.html",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage", "topSites"],
+  "chrome_url_overrides": {
+    "newtab": "/newTab/index.html"
+  }
+}
