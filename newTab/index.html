@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Tab</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="app.js" defer></script>
+    <script src="app.js" type="module" defer></script>
+    <script src="vocab.js" defer></script>
   </head>
   <body>
     <img
@@ -32,6 +33,9 @@
   </article>
 
   </section> -->
+  <aside class="time-container">
+    <h1 class="time"><span id="hours"></span>:<span id="minutes"></span></h1>
+  </aside>
   <aside class="search">
     <svg
       class="search-icon"
@@ -59,7 +63,7 @@
     <main>
       <div class="vocab">
         <div class="top-left-items">
-          <div class="pos" id="pos"></div>
+          <div class="pos" id="pos">pos</div>
           <svg
             id="hear"
             class="hear"
@@ -86,15 +90,15 @@
           </svg>
         </div>
         <div class="phonetic" id="phonetic">Phonetic</div>
-        <h1 class="word" id="word"></h1>
+        <h1 class="word" id="word">Word</h1>
         <div class="synonyms">
-          <div class="synonym"></div>
-          <div class="synonym"></div>
-          <div class="synonym"></div>
-          <div class="synonym"></div>
+          <div class="synonym">synonym</div>
+          <div class="synonym">synonym</div>
+          <div class="synonym">synonym</div>
+          <div class="synonym">synonym</div>
         </div>
-        <div class="definition" id="definition"></div>
-        <div class="sentence" id="sentence"></div>
+        <div class="definition" id="definition">definition of the word</div>
+        <div class="sentence" id="sentence">example sentence using the word</div>
         <div class="origin" id="origin"></div>
       </div>
       <section class="quick-links" id="quickLinks">
